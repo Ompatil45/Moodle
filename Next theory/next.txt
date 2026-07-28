@@ -1,0 +1,4 @@
+think of layout.js as a parent component and all page.js as a children component.
+all that we return in page.js,gets wrpped in layout.js through {children} property.
+
+this basically means,we can keep the same layout for multiple pages.

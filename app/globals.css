@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+.textGradient {
+  background: linear-gradient(
+    to right,
+    #3b82f6,
+    #8b5cf6
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+.lavender{
+  box-shadow: 2px 2px 1px 1px rgb(230, 230, 250);
+  box-sizing: 50px;
+  transition: 0.3s;
+  
+}
+.lavender:hover{
+  opacity: 80;
+  box-shadow: 3px 3px 1px 1px rgb(230, 230, 650);
+  transform: scale(1.1);
+
+}
+
+
