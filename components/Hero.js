@@ -3,6 +3,7 @@ import React from 'react'
 import Button from './Button';
 import Calender from './Calender';
 import Link from 'next/link';
+import CalltoAction from './CalltoAction';
 const opensans = Open_Sans({
   variable: "--font-opensans",
   subsets: ["latin"],
@@ -24,15 +25,7 @@ export default function Hero() {
      <p className="text-center text-lg sm:text-xl md:text-2xl max-w-[600px] mx-auto ">create your own mood record and see how you feel on 
        <span className="font-semibold"> every day of every year</span>
      </p>
-     <div className='mx-auto max-w-300 whitespace-overlap grid grid-cols-2 gap-2'>
-      <Link href={'/dashboard'}>
-             <Button text = 'Sign up' />
-      </Link>
-      <Link href={'/dashboard'}>
-             <Button text = 'Login' dark />
-      </Link>
-      
-     </div>
+     <CalltoAction/>
      <Calender demo />
      
     </div>

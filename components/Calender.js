@@ -77,10 +77,10 @@ export default function Calender(props) {
 
   return (
     <div className='flex flex-col gap-4'>
-      <div className='grid grid-cols-3 gap-4'>
-        <button onClick={handleIncrementDecrementMonth(-1)} className='mr-auto text-indigo-500'><i className="fa-solid fa-circle-chevron-left"></i></button>
-        <p className={`text-center capitalized textGradient ${fugaz.className}`}>{selectedMonth}</p>
-        <button onClick={handleIncrementDecrementMonth(1)} className='ml-auto text-indigo-500'><i className ="fa-solid fa-circle-chevron-right"></i></button>
+      <div className='grid grid-cols-5 gap-4'>
+        <button onClick={() => handleIncrementDecrementMonth(-1)} className='mr-auto cursor-pointer text-indigo-500 sm:text-xl md:2xl'><i className="fa-solid fa-circle-chevron-left"></i></button>
+        <p className={`text-center col-span-3 capitalized whitespace-nowrap textGradient ${fugaz.className}`}>{selectedMonth}, {selectedYear}</p>
+        <button onClick={() => handleIncrementDecrementMonth(1)} className='ml-auto cursor-pointer  text-indigo-500 sm:text-xl md:2xl'><i className ="fa-solid fa-circle-chevron-right"></i></button>
       </div>
     <div className='flex flex-col overflow-hidden  gap-1 py-4 sm:py-6 md:py-10'>
       {[...Array(numRows).keys()].map((row,rowIndex) => 

@@ -2,6 +2,7 @@ import { Fugaz_One, Geist, Geist_Mono,Open_Sans } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/Context/AuthContext";
 import Head from "./head";
+import Logout from "@/components/Logout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
       <h1 className= {`text-base sm:text-lg textGradient  ${fugaz.className}`} >
         Moodle
       </h1>
+      <Logout/>
       
     </header>
   )
