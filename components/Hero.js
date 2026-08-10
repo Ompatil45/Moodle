@@ -19,10 +19,10 @@ const fugaz = Fugaz_One({
 
 export default function Hero() {
   return (
-    <div className='py-10 sm:py-15 md:py-20 flex flex-col gap-6'>
-     <h1 className={`text-center text-5xl sm:6xl md:7xl ${fugaz.className}`}><span className= {`textGradient ${fugaz.className}`}>Moodle </span>Tracks your <span className= {`textGradient ${fugaz.className}`}>daily </span>mood
+    <div className='py-10 sm:py-12 md:py-16 flex flex-col gap-10'>
+     <h1 className={`text-center text-5xl sm:6xl md:8xl ${fugaz.className}`}><span className= {`textGradient ${fugaz.className}`}>Moodle </span>Tracks your <span className= {`textGradient ${fugaz.className}`}>daily </span>mood
      </h1>
-     <p className="text-center text-lg sm:text-xl md:text-2xl max-w-[600px] mx-auto ">create your own mood record and see how you feel on 
+     <p className="text-center text-lg sm:text-2xl md:text-3xl w-full mx-auto max-w-[600px]  ">create your own mood record and see how you feel on 
        <span className="font-semibold"> every day of every year</span>
      </p>
      <CalltoAction/>

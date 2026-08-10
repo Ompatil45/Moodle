@@ -3,6 +3,7 @@ import "./globals.css";
 import { AuthProvider } from "@/Context/AuthContext";
 import Head from "./head";
 import Logout from "@/components/Logout";
+import Main from "@/components/Main";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +36,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const header = (
-    <header className="p-4 sm:p-8 flex items-center justify-between  " >
+    <header className="p-4 sm:p-8 flex items-center justify-between " >
       <h1 className= {`text-base sm:text-lg textGradient  ${fugaz.className}`} >
         Moodle
       </h1>
@@ -44,7 +45,7 @@ export default function RootLayout({ children }) {
     </header>
   )
   const footer = (
-    <footer className="p-4 sm:8">
+    <footer className="p-4 sm:p-8 grid place-items-center">
       <p className={`text-center text-indigo-600 ${fugaz.className}`}>Created with 💙</p>
     </footer>
   )
@@ -57,7 +58,7 @@ export default function RootLayout({ children }) {
     >
       <Head></Head>
       <AuthProvider> 
-      <body className={`w-full max-width-[1000px] text-sm sm:text-base min-h-full flex flex-col ${opensans.variable} ${opensans.className}`}>
+      <body className={`w-full max-w-[1200px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-800 ${opensans.variable} ${opensans.className}`}>
         {header}
         {children}
         {footer}

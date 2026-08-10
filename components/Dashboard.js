@@ -7,6 +7,7 @@ import { doc, setDoc } from 'firebase/firestore'
 import { db } from '@/firebase'
 import Login from './Login'
 import Loading from './Loading'
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
 
 
 
@@ -38,7 +39,7 @@ export default function Dashboard() {
    }
     const statuses = {
     ...countValues(),
-    time_remaining: `${23-now.getHours()}H ${60-now.getMinutes()}`,
+    time_remaining: `${23-now.getHours()}H ${60-now.getMinutes()}M`,
     
   }
 
@@ -109,6 +110,8 @@ export default function Dashboard() {
         return <Login></Login>
       }
   return (
+    <div>
+    
     <div className='flex flex-col flex-1 gap-4 sm:gap-8 md:gap-12'>
       <div className='grid grid-cols-1 sm:grid-cols-3 bg-indigo-50 rounded-lg text-indigo-600 sm:text-center mt-[10px] ml-4 mr-4 sm:ml-7 sm:mr-7'>
         {Object.keys(statuses).map((status,statusIndex) => {
@@ -124,7 +127,7 @@ export default function Dashboard() {
 
       </div>
       <div className='text-center m-8'>
-      <p className='text-4xl sm:text-5xl md:6xl'>How are you <span className={`text-indigo-600 ${fugaz.className}`}>feeling</span> today!</p>
+      <p className='text-5xl sm:text-6xl md:7xl'>How are you <span className={`text-indigo-600 ${fugaz.className}`}>feeling</span> today!</p>
       </div>
       <div className='flex items-stretch flex-wrap text-center gap-4 text-xl md:3xl ml-4 mr-4 sm:ml-8 sm:mr-8'>
         {Object.keys(moods).map((mood,moodIndex) => {
@@ -139,7 +142,8 @@ export default function Dashboard() {
         )
         })}
       </div>
-      <Calender completeData={data} handleSetMood={handleSetMood}/>
+      <Calender completeData={data} handleSetMood={handleSetMood} />
+    </div>
     </div>
   )
 }
