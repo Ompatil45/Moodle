@@ -19,7 +19,7 @@ const fugaz = Fugaz_One({
 
 export default function Hero() {
   return (
-    <div className='py-10 sm:py-12 md:py-16 flex flex-col gap-10'>
+    <div className='py-8 sm:py-10 md:py-12 flex flex-col gap-10'>
      <h1 className={`text-center text-5xl sm:6xl md:8xl ${fugaz.className}`}><span className= {`textGradient ${fugaz.className}`}>Moodle </span>Tracks your <span className= {`textGradient ${fugaz.className}`}>daily </span>mood
      </h1>
      <p className="text-center text-lg sm:text-2xl md:text-3xl w-full mx-auto max-w-[600px]  ">create your own mood record and see how you feel on 

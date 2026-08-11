@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
     >
       <Head></Head>
       <AuthProvider> 
-      <body className={`w-full max-w-[1200px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-800 ${opensans.variable} ${opensans.className}`}>
+      <body className={`w-full max-w-[1200px] mx-auto text-sm sm:text-base min-h-screen flex flex-col justify-between text-slate-800 ${opensans.variable} ${opensans.className}`}>
         {header}
         {children}
         {footer}

@@ -73,7 +73,8 @@ const value = {
     setUserDataObj,
     signup,
     login,
-    logout
+    logout,
+    loading,
 
 }
 return (

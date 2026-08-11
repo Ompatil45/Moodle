@@ -113,11 +113,11 @@ export default function Dashboard() {
     <div>
     
     <div className='flex flex-col flex-1 gap-4 sm:gap-8 md:gap-12'>
-      <div className='grid grid-cols-1 sm:grid-cols-3 bg-indigo-50 rounded-lg text-indigo-600 sm:text-center mt-[10px] ml-4 mr-4 sm:ml-7 sm:mr-7'>
+      <div className='grid grid-cols-3 sm:grid-cols-3 bg-indigo-50 rounded-lg text-indigo-600 text-center mt-[10px] ml-4 mr-4 sm:ml-7 sm:mr-7'>
         {Object.keys(statuses).map((status,statusIndex) => {
           return(
             <div key={statusIndex} className='p-4 flex flex-col gap-1'>
-              <p className='text-xs sm:text-sm md:text-lg capitalize'>{status.replaceAll('_',' ')}</p>
+              <p className='text-xs sm:text-md md:text-xl capitalize'>{status.replaceAll('_',' ')}</p>
               <p className={`${fugaz.className}`}>{statuses[status]}</p>
 
             </div>
@@ -129,7 +129,7 @@ export default function Dashboard() {
       <div className='text-center m-8'>
       <p className='text-5xl sm:text-6xl md:7xl'>How are you <span className={`text-indigo-600 ${fugaz.className}`}>feeling</span> today!</p>
       </div>
-      <div className='flex items-stretch flex-wrap text-center gap-4 text-xl md:3xl ml-4 mr-4 sm:ml-8 sm:mr-8'>
+      <div className='flex items-stretch flex-wrap text-center gap-4 text-xl md:3xl ml-4 mr-4 sm:ml-8 sm:mr-8 md:w-[95%'>
         {Object.keys(moods).map((mood,moodIndex) => {
           return(
           <button onClick={() => {
@@ -137,12 +137,12 @@ export default function Dashboard() {
             handleSetMood(currentMoodValue)
           }} key={moodIndex} className={`flex flex-col gap-1 flex-1  mx-auto w-fit p-5 md:p-4 cursor-pointer border border-solid bg-indigo-50 rounded-lg border-[0px] lavender`}>
             <p className='text-4xl sm:5xl md:6xl'>{moods[mood]}</p>
-            <p className={`text-indigo-500 text-xs sm:text-sm md:text-base ${fugaz.className}`}>{mood}</p>
+            <p className={`text-indigo-500 text-sm sm:text-md md:text-lg ${fugaz.className}`}>{mood}</p>
           </button>
         )
         })}
       </div>
-      <Calender completeData={data} handleSetMood={handleSetMood} />
+      <Calender completeData={data} handleSetMood={handleSetMood}/>
     </div>
     </div>
   )

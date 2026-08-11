@@ -31,8 +31,12 @@
 }
 
 html{
-  zoom: 70%;
+  font-size: 75%;
 }
+
+
+
+
 
 @theme inline {
   --font-heading: var(--font-sans);

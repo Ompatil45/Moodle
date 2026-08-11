@@ -48,15 +48,23 @@ export default function Login() {
   }
 
   return (
-    <div className='flex-1 flex flex-col justify-center items-center gap-4'>
+    <div className='flex-1 flex flex-col'>
+      <style jsx global>
+        {
+          `body > footer { display: none;}`
+
+        }
+      </style>
+    
+    <div className='flex flex-col flex-1 justify-content items-center gap-4 '>
       <h3 className={`text-4xl sm:text-5xl md:6xl ${fugaz.className}`}>{isRegister ? 'Register' : 'Login'}</h3>
       <p>You&#39;re one step away!</p>
-      <div className='flex flex-col gap-3 max-w-[320px] w-full mx-auto sm:max-w-[400px]'>
+      <div className='flex flex-col gap-3 max-w-[320px] w-full mx-auto sm:max-w-[400px] p-6'>
         <input value={email} onChange={(e) => {setEmail(e.target.value)}} placeholder='Email' type='text' className='w-full max-w-[400px] mx-auto px-3 duration-200 hover:border-indigo-600 focus:border-indigo-600 py-2 sm:py-3 border border-solid border-indigo-400 rounded-full outline-none'/>
         <input value={password} onChange={(e) => {setPassword(e.target.value)}} placeholder='Password' type='password' className='w-full max-w-[400px] mx-auto px-3 duration-200 hover:border-indigo-600 focus:border-indigo-600 py-2 sm:py-3 border border-solid border-indigo-400 rounded-full outline-none'/>
       </div>
         
-        <div className='max-w-[320px] w-full mx-auto sm:max-w-[400px]'>
+        <div className='max-w-[220px] w-full mx-auto sm:max-w-[300px] '>
           <Button clickHandler={HandleSubmit} text ={authenticating ? 'Submitting' : 'Submit'} full />
         </div>
         <p>{isRegister ? 'Already have an account? ' : 'Don\'t have an account? '}
@@ -64,6 +72,11 @@ export default function Login() {
         </p>
         
       </div>
+      <footer className='fixed inset-x-0 bottom-0 p-4 sm:p-8 grid place-items-center'>
+        <p className={`text-center text-indigo-600 ${fugaz.className}`}>Created with 💙</p>
+      </footer>
+      </div>
+      
      
     
   )
